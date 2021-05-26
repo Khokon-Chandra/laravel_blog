@@ -16,9 +16,17 @@ function getServiceData () {
                     "<td>" + jsonData[i].service_name + "</td>" +
                     "<td>" + jsonData[i].service_des + "</td>" +
                     "<td><a href='' ><i class='fas fa-edit'></i></a></td>" +
-                    "<td><a data-mdb-toggle='modal' data-mdb-target='#exampleModal' ><i class='fas fa-trash-alt'></i></a></td>"
+                    "<td><a class='serviceDeleteBtn' data-id =" + jsonData[i].id + " data-mdb-toggle='modal' data-mdb-target='#deleteModal' ><i class='fas fa-trash-alt'></i></a></td>"
                 ).appendTo('#service_table');
             });
+            $('.serviceDeleteBtn').click(function(){
+                var id = $(this).data('id');
+                $('#deleteConfirmBtn').attr('data-id', id);
+            })
+            $('#deleteConfirmBtn').click(function(){
+                var id = $(this).data('id');
+                getServiceDelete(id);
+            })
         } else {
             $("#loaderDiv").addClass("d-none");
             $("#wrongDiv").removeClass("d-none");
@@ -28,4 +36,18 @@ function getServiceData () {
         $("#loaderDiv").addClass("d-none");
         $("#wrongDiv").removeClass("d-none");
     });
+    
+    function getServiceDelete(deleteId) {
+        axios.post('/ServiceDelete', {id:deleteId})
+        .then(function (response) {
+            if(response.data == 1){
+                alert('success');
+            } else {
+                alert('fali')
+            }
+        })
+        .catch(function(error){
+
+        });
+    }
 }

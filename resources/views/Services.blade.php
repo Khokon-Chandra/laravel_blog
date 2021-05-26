@@ -39,43 +39,18 @@
     </div>
 </div>
 
-<!-- Button trigger modal -->
-<button
-  type="button"
-  class="btn btn-primary"
-  data-mdb-toggle="modal"
-  data-mdb-target="#staticBackdrop"
->
-  Launch static backdrop modal
-</button>
-
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="exampleModal"
-  data-mdb-backdrop="static"
-  data-mdb-keyboard="false"
-  tabindex="-1"
-  aria-labelledby="staticBackdropLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="deleteModal" data-mdb-backdrop="static" data-mdb-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-mdb-dismiss="modal"
-          aria-label="Close"
-        ></button>
+      <div class="modal-body text-center p-5">
+        <h5 class="modal-title" id="staticBackdropLabel">Do you delete ?</h5>
       </div>
-      <div class="modal-body">...</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-          Close
+        <button type="button" class="btn btn-sm btn-secondary" data-mdb-dismiss="modal">
+          No
         </button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button data-id ="" id="deleteConfirmBtn" type="button" class="btn btn-sm btn-danger">Yes</button>
       </div>
     </div>
   </div>

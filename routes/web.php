@@ -18,3 +18,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'HomeIndex']);
 Route::get('/visitor', [App\Http\Controllers\VisitorController::class, 'VisitorIndex']);
 Route::get('/services', [App\Http\Controllers\ServicesController::class, 'ServiceIndex']);
 Route::get('/getServiceData', [App\Http\Controllers\ServicesController::class, 'getServiceData']);
+Route::post('/ServiceDelete', [App\Http\Controllers\ServicesController::class, 'ServiceDelete']);

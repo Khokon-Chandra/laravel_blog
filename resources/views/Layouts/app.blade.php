@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sidenav.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('css/datatables.min.css') }}">
@@ -34,6 +35,7 @@
 <script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.slimscroll.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/sidebarmenu.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/toastr.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/sticky-kit.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.min-2.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/datatables.min.js') }}"></script>
