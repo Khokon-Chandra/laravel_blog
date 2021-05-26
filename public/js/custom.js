@@ -40,10 +40,10 @@ function getServiceData () {
     function getServiceDelete(deleteId) {
         axios.post('/ServiceDelete', {id:deleteId})
         .then(function (response) {
-            if(response.data == 1){
-                alert('success');
+            if(response.status == 200){
+               toastr.success("Deleted Successfully !!");
             } else {
-                alert('fali')
+                toastr.error("Delete Faild !!");
             }
         })
         .catch(function(error){
